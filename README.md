@@ -21,12 +21,12 @@ public class SizeOfAnObject {
   public static void main(String[] args) {
     System.out.println(ObjectSizeAgent.sizeOf(new Object()));
     System.out.println(ObjectSizeAgent.sizeOf(new int[]{}));
-    System.out.println(ObjectSizeAgent.sizeOf(new P()));
+    System.out.println(ObjectSizeAgent.sizeOf(new OrdinaryObject()));
   }
 
   // 一个 Object 占多少个字节
   // Oops = ordinary object pointers  普通对象指针
-  private static class P {
+  private static class OrdinaryObject {
     // 8 _markword
     // 4 _class pointer
     int id;         // 4
